@@ -2,4 +2,8 @@
 
 //use Illuminate\Support\Facades\Route;
 
-Route::get('/posts', 'PostController@index');
+// Route::get('/', function(){
+//     return view('index');
+// });
+
+Route::get('/', 'PostController@index');
