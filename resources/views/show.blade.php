@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>blog</title>
+        <title>Posts</title>
 
         <title>Laravel</title>
 
@@ -12,14 +12,19 @@
     </head>
     <body>
         
-        <h1>Blog Name</h1>
-        <div class = 'posts'>
-            @foreach ($posts as $post)
-            <div class = 'post'>
-                <h3 class = 'title'><a href="/posts/{{ $post->id }}">{{ $post->title}}</a></h3>
-                <p class = 'body'>{{ $post->body }}</p>
+        <h1 class = "title">
+            {{ $post->title }}
+        </h1>
+        <div class = "content">
+            <div class = "content_post">
+                <h3>本文</h3>
+                <p>{{ $post->body }}</p>
             </div>
-            @endforeach
         </div>
+        
+        <div class = "footer">
+            <a href="/">戻る</a>
+        </div>
+        
     </body>
 </html>
